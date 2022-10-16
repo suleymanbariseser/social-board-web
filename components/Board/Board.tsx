@@ -1,5 +1,7 @@
 import { Grid } from '@mui/material';
 import { FC } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import StyleMap from '../../types/StyleMap';
 import BoardColumn, { BoardColumnProps } from '../BoardColumn';
 
@@ -12,13 +14,15 @@ export interface BoardProps {
 
 const Board: FC<BoardProps> = ({ columns }) => {
   return (
-    <Grid sx={styles.root} container direction='row'>
-      {columns.map((column) => (
-        <Grid sx={styles.column} key={`${column.id}-Grid`} item xs>
-          <BoardColumn key={`${column.id}-BoardColumn`} {...column} />
-        </Grid>
-      ))}
-    </Grid>
+    <DndProvider backend={HTML5Backend}>
+      <Grid sx={styles.root} container direction='row'>
+        {columns.map((column) => (
+          <Grid sx={styles.column} key={`${column.id}-Grid`} item xs>
+            <BoardColumn key={`${column.id}-BoardColumn`} {...column} />
+          </Grid>
+        ))}
+      </Grid>
+    </DndProvider>
   );
 };
 
