@@ -2,6 +2,13 @@
 
 Social Board is a social media application where user can create plans and goals. User can share processes for his/her activities. For example, I have a planned Europe tour so i can share pictures those i took while traveling.
 
+## TODO
+
+- [x] Create Board
+- [ ] Allow user to move a card from one column to another
+- [ ] Create a page for activities where user can see detailed version of a card
+
+
 ## Getting Started
 
 First, run the development server:
