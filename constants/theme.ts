@@ -35,8 +35,23 @@ const theme = createTheme({
       ...createResponsiveFontSize(24, 18),
       fontWeight: 'bold',
     },
+    subtitle1: {
+      fontWeight: 500,
+    },
+    subtitle2: {
+      fontWeight: 500,
+    },
   },
-  spacing: 4
+  palette: {
+    primary: {
+      main: '#A974FF',
+    },
+    background: {
+      default: '#EDF3FC',
+      paper: '#ECEFF7',
+    },
+  },
+  spacing: 4,
 });
 
 export default theme;
