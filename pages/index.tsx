@@ -1,15 +1,7 @@
-import { NextPage } from 'next';
-import React from 'react';
-import Board from '../components/Board/Board';
-import { columns } from '../constants/mocks/board';
-import Layout from '../containers/Layout';
-
-const Home: NextPage = () => {
+const index = () => {
   return (
-    <Layout>
-      <Board columns={columns} />
-    </Layout>
-  );
-};
+    <div>index</div>
+  )
+}
 
-export default Home;
+export default index

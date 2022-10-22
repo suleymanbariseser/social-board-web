@@ -7,6 +7,7 @@ Social Board is a social media application where user can create plans and goals
 - [x] Create Board
 - [ ] Allow user to move a card from one column to another
 - [ ] Create a page for activities where user can see detailed version of a card
+- [ ] Create a profile page
 
 
 ## Getting Started

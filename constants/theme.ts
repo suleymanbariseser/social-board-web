@@ -1,5 +1,5 @@
 import '@fontsource/poppins';
-import { createTheme } from '@mui/material';
+import { createTheme, responsiveFontSizes } from '@mui/material';
 
 const createResponsiveFontSize = (desktop: number, mobile: number) => ({
   fontSize: desktop,
@@ -49,6 +49,33 @@ const theme = createTheme({
     background: {
       default: '#EDF3FC',
       paper: '#ECEFF7',
+    },
+  },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'white',
+          borderRadius: 12,
+          overflow: 'hidden',
+          boxShadow: 'none',
+          padding: 12
+        }
+      }
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          borderRadius: '8px !important',
+          '&:after, &:before': {
+            display: 'none',
+          },
+        },
+        input: {
+          paddingTop: '8.5px !important',
+          paddingBottom: '8.5px !important'
+        }
+      },
     },
   },
   spacing: 4,
