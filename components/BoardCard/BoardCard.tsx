@@ -151,12 +151,12 @@ const baseStyles: StyleMap<BoardCardSxKeys> = {
   root: {
     padding: 5,
     borderRadius: 2,
-    boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+    // boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     textAlign: 'left',
-    backgroundColor: 'white',
+    backgroundColor: 'background.paper',
   },
   icon: {
     pr: 2,

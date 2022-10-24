@@ -1,23 +1,18 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import { FC } from 'react';
 import StyleMap from '../../types/StyleMap';
-import Menu from '../Menu';
+import MyActivities from '../MyActivities';
+import MyFriends from '../MyFriends';
 
-export type SidebarSxKeys = 'root' | 'logo';
+export type SidebarSxKeys = 'root' | 'listItemRoot' | 'logo';
 
 export interface SidebarProps {}
 
 const Sidebar: FC<SidebarProps> = ({}) => {
   return (
     <Grid sx={styles.root} container direction='column'>
-      <Grid item>
-        <Typography sx={styles.logo} variant='h1'>
-          LOGO
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Menu />
-      </Grid>
+      <MyActivities />
+      <MyFriends />
     </Grid>
   );
 };
@@ -26,13 +21,18 @@ export default Sidebar;
 
 const styles: StyleMap<SidebarSxKeys> = {
   root: {
-    background: 'linear-gradient(to left bottom, #FFFFFF, #ECEFF7)',
+    backgroundColor: 'transparent',
     height: '100%',
-    minWidth: 275
+    minWidth: 325,
+    px: 4,
+    gap: 4
   },
   logo: {
     mb: 5,
     px: 8,
     py: 4,
+  },
+  listItemRoot: {
+    px: 8,
   },
 };

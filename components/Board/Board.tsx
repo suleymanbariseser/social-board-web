@@ -14,11 +14,11 @@ export interface BoardProps {
 
 const Board: FC<BoardProps> = ({ columns }) => {
   return (
-    <Grid component={Paper} elevation={1} container direction='column'>
+    <Grid sx={styles.root} container direction='column'>
       <DndProvider backend={HTML5Backend}>
         <Grid sx={styles.root} container direction='row'>
           {columns.map((column) => (
-            <Grid sx={styles.column} key={`${column.id}-Grid`} item xs>
+            <Grid component={Paper} elevation={1} key={`${column.id}-Grid`} item xs>
               <BoardColumn key={`${column.id}-BoardColumn`} {...column} />
             </Grid>
           ))}
@@ -31,8 +31,9 @@ const Board: FC<BoardProps> = ({ columns }) => {
 export default Board;
 
 const styles: StyleMap<BoardSxKeys> = {
-  root: {},
+  root: {
+    gap: 4
+  },
   column: {
-    px: 3,
   },
 };
